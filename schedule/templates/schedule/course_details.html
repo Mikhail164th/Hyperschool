@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>course_details</title>
+</head>
+<body style="background-color: beige">
+    <h2>{{course.title}}</h2>
+    <p>Course info: {{course.info}}</p>
+    <p>Duration (months): {{course.duration_months}}</p>
+    <p>Price: {{course.price}}</p>
+    <p>Teachers:</p>
+        <a href="/schedule/teacher_details/1"> {{teacher}}</a>
+        <ul>
+            {% for teacher in course.teacher.all %}
+                <li><a href={{ teacher.get_absolute_url }}> {{teacher}}</a> </li>
+            {% endfor %}
+        </ul>
+    <h2>Join  us</h2>
+    <a href="/schedule/add_course"> Apply to the course {{course.title}} </a>
+    <br>
+    <a href="/schedule/main/"> Go back to the list of courses </a>
+</body>
+</html>
