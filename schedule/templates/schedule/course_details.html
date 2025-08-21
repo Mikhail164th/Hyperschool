@@ -16,6 +16,12 @@
                 <li><a href={{ teacher.get_absolute_url }}> {{teacher}}</a> </li>
             {% endfor %}
         </ul>
+    <p>Already learning this course:</p>
+    <ul>
+        {% for student in course.student_set.all %}
+        <li>{{ student.name }} {{ student.surname }}</li>
+        {% endfor %}
+    </ul>
     <h2>Join  us</h2>
     <a href="/schedule/add_course"> Apply to the course {{course.title}} </a>
     <br>

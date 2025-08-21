@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
-<body>
-<form method="post">
+<body style="background-color: beige">
+<form method="post"> {% csrf_token %}
         {{ form }}
     <br>
         <button type="submit">Login</button>
