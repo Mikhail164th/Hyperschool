@@ -19,7 +19,7 @@
     <p>Already learning this course:</p>
     <ul>
         {% for student in course.student_set.all %}
-        <li>{{ student.name }} {{ student.surname }}</li>
+        <li><p>{{ student.name }} {{ student.surname }}</p></li>
         {% endfor %}
     </ul>
     <h2>Join  us</h2>
